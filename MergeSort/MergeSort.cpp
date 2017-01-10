@@ -8,9 +8,9 @@
 
 using namespace std;
 
-int *randArray(int, int);
-int *merge(int*, int, int*, int);
-int *mergeSort(int*, int, int);
+int *randArray	(int, int);
+int *merge		(int*, int, int*, int);
+int *mergeSort	(int*, int, int);
 
 int main()
 {
@@ -22,8 +22,8 @@ int main()
 	for (int i = 0; i < size; i++) {
 		cout << i << ": " << arr[i] << "\n";
 	}
-	cin.get();
 
+	cin.get();
 	delete arr;
 
     return 0;
@@ -91,6 +91,8 @@ int *merge(int *arrayA, int sizeA, int *arrayB, int sizeB) {
 		posB++;
 		sortedPos++;
 	}
+
+	delete arrayB, arrayA;
 
 	return sortedArray;
 }
