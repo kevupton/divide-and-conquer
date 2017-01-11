@@ -1,46 +1,11 @@
 // MergeSort.cpp : Defines the entry point for the console application.
 //
 
-#include "stdafx.h"
 #include <stdio.h>
-#include <iostream>
 #include <stdlib.h>
+#include "MergeSort.h"
 
 using namespace std;
-
-int *randArray	(int, int);
-int *merge		(int*, int, int*, int);
-int *mergeSort	(int*, int, int);
-
-int main()
-{
-	int size = 100;
-	int max = 100;
-
-	int *arr = mergeSort(randArray(size, max), 0, size);
-
-	for (int i = 0; i < size; i++) {
-		cout << i << ": " << arr[i] << "\n";
-	}
-
-	cin.get();
-	delete arr;
-
-    return 0;
-}
-
-
-int* randArray(int total, int modulous) {
-	int *intArray = new int[total];
-
-	for (int i = 0; i < total; i++) {
-		int random = rand() % modulous;
-
-		intArray[i] = random;
-	}
-
-	return intArray;
-}
 
 int* mergeSort(int *unsortedArray, int from, int length) {
 

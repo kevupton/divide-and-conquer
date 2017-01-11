@@ -1,13 +1,9 @@
 // SelectionSort.cpp : Defines the entry point for the console application.
 //
 
-#include "stdafx.h"
+#include "SelectionSort.h"
 
-
-int main()
-{
-    return 0;
-}
+using namespace std;
 
 int *selectionSort(int *unsortedArray, int length) {
 	int *sortedArray = new int[length];
